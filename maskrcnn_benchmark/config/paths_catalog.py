@@ -15,10 +15,6 @@ class DatasetCatalog(object):
             "img_dir": "/DOTA/test_cut/images",
             "ann_file": "/DOTA/test_cut/test_cut.json"
         },
-        "dota1_test_cut": {
-            "img_dir": "/DOTA1/test_cut/images",
-            "ann_file": "/DOTA1/test_cut/test.json"
-        },
     }
 
     @staticmethod

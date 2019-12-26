@@ -1,6 +1,6 @@
 # Gliding vertex on the horizontal bounding box for multi-oriented object detection 
 
-This repository is the code of paper "[Gliding vertex on the horizontal bounding box for multi-oriented object detection](https://arxiv.org/abs/1911.09358)". 
+This is the repository of paper "[Gliding vertex on the horizontal bounding box for multi-oriented object detection](https://arxiv.org/abs/1911.09358)". 
 
 ![image-20191218130556646](https://tva1.sinaimg.cn/large/006tNbRwly1ga0sm5sjiuj30w60ek1kx.jpg)
 
@@ -66,7 +66,7 @@ REPO_ROOT$ python prepare.py
 
 #### 2. Train
 
-You can train the model by yourself or directly use the snapshot provided by us.
+You can train the model by yourself or directly use the snapshot provided by us: from [Google Drive](https://drive.google.com/open?id=19j6PiHFdtWemu0TC6pURKCpVcjKawPso) or [Baidu NetDisk](https://pan.baidu.com/s/1FO2eNBP6J6HgiklGjxnxuw).
 
 ```shell
 REPO_ROOT$ python -m torch.distributed.launch --nproc_per_node=3 tools/train_net.py --config-file configs/glide/dota.yaml
@@ -78,3 +78,12 @@ REPO_ROOT$ python -m torch.distributed.launch --nproc_per_node=3 tools/train_net
 REPO_ROOT$ python -m torch.distributed.launch --nproc_per_node=3 tools/test_net.py --config-file configs/glide/dota.yaml
 ```
 
+BibTex:
+```
+@article{xu2019gliding,
+  title={Gliding vertex on the horizontal bounding box for multi-oriented object detection},
+  author={Xu, Yongchao and Fu, Mingtao and Wang, Qimeng and Wang, Yukang and Chen, Kai and Xia, Gui-Song and Bai, Xiang},
+  journal={arXiv preprint arXiv:1911.09358},
+  year={2019}
+}
+```
