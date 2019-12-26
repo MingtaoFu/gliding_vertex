@@ -8,7 +8,6 @@ from .misc import ConvTranspose2d
 from .misc import BatchNorm2d
 from .misc import interpolate
 from .nms import nms
-from .coveredby import coveredby
 from .psroi_align import PSROIAlign
 from .psroi_align import psroi_align
 from .roi_align import ROIAlign
@@ -25,7 +24,6 @@ from .dcn.deform_pool_module import DeformRoIPooling, DeformRoIPoolingPack, Modu
 
 __all__ = [
     "nms",
-    "coveredby",
     "roi_align",
     "ROIAlign",
     "roi_pool",
