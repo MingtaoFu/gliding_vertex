@@ -1,0 +1,16 @@
+{
+  "original_root_dir": ".",
+  "target_root_dir": ".",
+  "sets": [
+    {
+      "name": "test",
+      "gap": 512,
+      "only_img": true
+    },
+    {
+      "name": "trainval",
+      "gap": 200,
+      "only_img": false
+    }
+  ]
+}

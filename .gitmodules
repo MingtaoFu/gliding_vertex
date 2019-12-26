@@ -1,0 +1,3 @@
+[submodule "maskrcnn_benchmark/DOTA_devkit"]
+	path = maskrcnn_benchmark/DOTA_devkit
+	url = https://github.com/CAPTAIN-WHU/DOTA_devkit.git
