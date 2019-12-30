@@ -14,6 +14,9 @@ from maskrcnn_benchmark.utils.poly_nms.poly_nms import poly_nms
 from maskrcnn_benchmark.config import cfg
 
 def write( output_folder, pred_dict ):
+    output_folder_txt = os.path.join( output_folder, "results" )
+    if not os.path.exists( output_folder_txt ):
+        os.mkdir( output_folder_txt )
     for key in pred_dict:
         detections = pred_dict[key]
         output_path = os.path.join( output_folder, "Task1_" + key + ".txt")

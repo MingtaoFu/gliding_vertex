@@ -77,6 +77,7 @@ REPO_ROOT$ python -m torch.distributed.launch --nproc_per_node=3 tools/train_net
 ```shell
 REPO_ROOT$ python -m torch.distributed.launch --nproc_per_node=3 tools/test_net.py --config-file configs/glide/dota.yaml
 # Edit ResultMerge.py and run it.
+# srcpath = "REPO_ROOT/exp_dota/dota/inference/dota_test_cut/results"
 REPO_ROOT/maskrcnn_benchmark/DOTA_devkit$ python ResultMerge.py
 ```
 
