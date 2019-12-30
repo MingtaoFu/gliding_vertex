@@ -15,9 +15,9 @@ for SET in SETs:
     if SET["only_img"]:
         if not os.path.exists( os.path.join( T_ROOT, SET["name"] + "_cut", "images" ) ):
             os.makedirs( os.path.join( T_ROOT, SET["name"] + "_cut", "images" ) )
-        split = splitbase_onlyimg( os.path.join( O_ROOT, SET["name"], "images" ), os.path.join( T_ROOT, SET["name"] + "_cut", "images" ), gap=SET["gap"], subsize=1024, num_process=8 )
+        split = splitbase_onlyimg( os.path.join( O_ROOT, SET["name"], "images" ), os.path.join( T_ROOT, SET["name"] + "_cut", "images" ), gap=SET["gap"], subsize=1024, num_process=8, padding=False )
     else:
-        split = splitbase( os.path.join( O_ROOT, SET["name"] ), os.path.join( T_ROOT, SET["name"] + "_cut" ), gap=SET["gap"], subsize=1024, num_process=8 )
+        split = splitbase( os.path.join( O_ROOT, SET["name"] ), os.path.join( T_ROOT, SET["name"] + "_cut" ), gap=SET["gap"], subsize=1024, num_process=8, padding=False )
     split.splitdata( 1 )
     split.splitdata( 0.5 )
 

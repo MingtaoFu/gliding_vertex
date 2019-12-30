@@ -77,7 +77,7 @@ def do_dota_evaluation(
             continue
 
         # img_name = img_info["file_name"].split( "/" )[-1].split( "." )[0]
-        img_name = os.path.basename( img_info["file_name"] )
+        img_name = os.path.basename( img_info["file_name"] ).split( "." )[0]
 
         for rbox, score, label in zip(rboxes, scores, labels):
             json_label = dataset.contiguous_category_id_to_json_id[label]
