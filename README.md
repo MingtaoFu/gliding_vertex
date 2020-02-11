@@ -86,7 +86,7 @@ BibTex:
 @article{xu2019gliding,
   title={Gliding vertex on the horizontal bounding box for multi-oriented object detection},
   author={Xu, Yongchao and Fu, Mingtao and Wang, Qimeng and Wang, Yukang and Chen, Kai and Xia, Gui-Song and Bai, Xiang},
-  journal={arXiv preprint arXiv:1911.09358},
-  year={2019}
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2020}
 }
 ```
