@@ -43,7 +43,32 @@ Test:
 REPO_ROOT$ python -m torch.distributed.launch --nproc_per_node=$NUM_GPUS tools/test_net.py --config-file $PATH_TO_CONFIG --ckpt=$PATH_TO_CKPT
 ```
 
-### Reproduce the results on DOTA
+### If you want to train with your own data
+This project use the json annotation file with COCO format.
+Make your directory layout like this:
+```
+.
+└── trainset
+    ├── images
+    │   ├── 1.png
+    │   └── 2.png
+    └── labelTxt
+        ├── 1.txt
+        └── 2.txt
+```
+A example of the \*.txt files ('1' means the object is difficult):
+```
+x1 y1 x2 y2 x3 y3 x4 y4 plane 0
+x1 y1 x2 y2 x3 y3 x4 y4 harbor 1
+```
+Run the following Python snippet, and it will generate the json annotation file:
+```python
+from txt2json import collect_unaug_dataset, convert
+img_dic = collect_unaug_dataset( os.path.join( "trainset", "labelTxt" ) )
+convert( img_dic, "trainset",  os.path.join( "trainset", "train.json" ) )
+```
+
+### If you want to reproduce the results on DOTA
 
 Config: `configs/glide/dota.yaml`
 
