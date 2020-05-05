@@ -106,6 +106,12 @@ REPO_ROOT$ python -m torch.distributed.launch --nproc_per_node=3 tools/test_net.
 REPO_ROOT/maskrcnn_benchmark/DOTA_devkit$ python ResultMerge.py
 ```
 
+#### (optional) 4. Check if you use this project correctly
+We provide the results on the valset in ```val_result.zip```. If your produced results are different from them, maybe there is something wrong with your usage. The APs are in the following table. Note that in fact the results are meaningless since the valset has been used in training stage. It is just used for checking if you are using this project correctly.
+|Plane|BD| Bridge| GTF| SV| LV| Ship| TC| BC| ST| SBF| RA| Harbor| SP| HC| mAP|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|90.75|89.13|68.94|79.81|75.54|84.58|88.67|90.91|97.25|90.51|81.82|88.32|87.61|83.18|90.91|85.86|
+
 BibTex:
 ```
 @article{xu2019gliding,
